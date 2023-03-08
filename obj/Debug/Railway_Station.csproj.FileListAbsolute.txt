@@ -1,0 +1,72 @@
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\App.g.cs
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MainWindow.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway_Station.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway_Station.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BD\Railway_Station\bin\Debug\Railway System.exe.config
+C:\Users\Admin\source\repos\BD\Railway_Station\bin\Debug\Railway System.exe
+C:\Users\Admin\source\repos\BD\Railway_Station\bin\Debug\Railway System.pdb
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Login.g.cs
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Register.g.cs
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway System_MarkupCompile.cache
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway System_MarkupCompile.lref
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Login.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Register.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway System.g.resources
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway_System.Properties.Resources.resources
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway System.exe
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway System.pdb
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\bin\Debug\Railway System.exe.config
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\bin\Debug\Railway System.exe
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\bin\Debug\Railway System.pdb
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway_Station.csproj.AssemblyReference.cache
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Login.g.cs
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\MainWindow.g.cs
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Register.g.cs
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\App.g.cs
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway System_MarkupCompile.cache
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway System_MarkupCompile.lref
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Login.baml
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\MainWindow.baml
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Register.baml
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway System.g.resources
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway_System.Properties.Resources.resources
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway_Station.csproj.GenerateResource.cache
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway_Station.csproj.CoreCompileInputs.cache
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway System.exe
+C:\Users\subzz\OneDrive\Desktop\Railway_Station\obj\Debug\Railway System.pdb
+D:\Baze de date\Railway_Station\bin\Debug\Railway System.exe.config
+D:\Baze de date\Railway_Station\bin\Debug\Railway System.exe
+D:\Baze de date\Railway_Station\bin\Debug\Railway System.pdb
+D:\Baze de date\Railway_Station\obj\Debug\Railway_Station.csproj.SuggestedBindingRedirects.cache
+D:\Baze de date\Railway_Station\obj\Debug\Login.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\MainWindow.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\Register.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\App.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\Railway System_MarkupCompile.cache
+D:\Baze de date\Railway_Station\obj\Debug\Railway System_MarkupCompile.lref
+D:\Baze de date\Railway_Station\obj\Debug\Login.baml
+D:\Baze de date\Railway_Station\obj\Debug\MainWindow.baml
+D:\Baze de date\Railway_Station\obj\Debug\Register.baml
+D:\Baze de date\Railway_Station\obj\Debug\Railway System.g.resources
+D:\Baze de date\Railway_Station\obj\Debug\Railway_System.Properties.Resources.resources
+D:\Baze de date\Railway_Station\obj\Debug\Railway_Station.csproj.GenerateResource.cache
+D:\Baze de date\Railway_Station\obj\Debug\Railway_Station.csproj.CoreCompileInputs.cache
+D:\Baze de date\Railway_Station\obj\Debug\Railway System.exe
+D:\Baze de date\Railway_Station\obj\Debug\Railway System.pdb
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MyAccount.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\MyAccount.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\MyAccount.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MyAccount.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MyTickets.g.cs
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\MyTickets.baml
+C:\Users\Admin\source\repos\BD\Railway_Station\obj\Debug\Railway_Station.csproj.AssemblyReference.cache
+D:\Baze de date\Railway_Station\obj\Debug\MyTickets.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\MyTickets.baml
+D:\Baze de date\Railway_Station\obj\Debug\AdminWindow.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\ModifyRouteDialog.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\AdminWindow.baml
+D:\Baze de date\Railway_Station\obj\Debug\ModifyRouteDialog.baml
+D:\Baze de date\Railway_Station\obj\Debug\Chose.g.cs
+D:\Baze de date\Railway_Station\obj\Debug\Chose.baml
+D:\Baze de date\Railway_Station\obj\Debug\Railway_Station.csproj.AssemblyReference.cache
