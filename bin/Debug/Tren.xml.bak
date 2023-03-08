@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<Trenuri>
+    <Tren IDTren="3000">
+      <TipTren>IR</TipTren>
+      <NumarVagoane>6</NumarVagoane>
+    </Tren>
+    <Tren IDTren="3001">
+      <TipTren>IR</TipTren>
+      <NumarVagoane>6</NumarVagoane>
+    </Tren>
+</Trenuri>

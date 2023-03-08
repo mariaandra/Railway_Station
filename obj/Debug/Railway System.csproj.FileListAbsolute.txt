@@ -1,0 +1,19 @@
+C:\Users\subzz\source\repos\Railway System\Railway System\bin\Debug\Railway System.exe.config
+C:\Users\subzz\source\repos\Railway System\Railway System\bin\Debug\Railway System.exe
+C:\Users\subzz\source\repos\Railway System\Railway System\bin\Debug\Railway System.pdb
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.csproj.AssemblyReference.cache
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\MainWindow.g.cs
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\App.g.cs
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System_MarkupCompile.cache
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System_MarkupCompile.lref
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\MainWindow.baml
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.g.resources
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway_System.Properties.Resources.resources
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.csproj.GenerateResource.cache
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.csproj.CoreCompileInputs.cache
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.exe
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Railway System.pdb
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Login.g.cs
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Login.baml
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Register.g.cs
+C:\Users\subzz\source\repos\Railway System\Railway System\obj\Debug\Register.baml

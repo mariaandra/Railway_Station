@@ -1,0 +1,247 @@
+Rute
+Galati-Bucuresti  --IR 1770:05:36 IR 12572:08:56 IR 12574:15:06 R-E 13702:18:07
+Bucuresti-Galati  --IR 12573:08:25 IR 12575:13:15 IR1773:15:24 R-E13701:18:09
+Brasov-Bucuresti
+Bucuresti-Brasov
+Bucuresti-Constanta
+Constanta-Bucuresti
+Ploiesti Sud-Brasov
+Brasov-Ploiesti Sud
+Bucuresti-Craiova
+Craiova-Bucuresti
+
+IDTren	Tip_Tren	Numar_vagoane
+72	IR	6
+73	IR	6
+78	IRN	6
+473	IRN	3
+1273	IR	6
+1580	IR	7
+1581	IR	9
+1582	IR	5
+1583	IR	5
+1584	IR	6
+1586	IR	5
+1597	IR	7
+1631	IR	4
+1632	IR	3
+1642	IRN	7
+1682	IR	6
+1684	IR	5
+1685	IR	3
+1686	IR	5
+1688	IR	5
+1691	IR	7
+1692	IR	6
+1693	IR	6
+1745	IR	3
+1770	IR	5
+1773	IR	3
+1821	IRN	8
+1822	IRN	7
+1823	IR	6
+1835	IR	7
+1897	IR	5
+3001	R	6
+3002	R	3
+3023	R	3
+3024	R	4
+8004	R	4
+9000	R-E	4
+9001	R	4
+9003	R	4
+9007	R-E	3
+9010	R	4
+9015	R-E	3
+9033	R-E	3
+9035	R-E	3
+9037	R-E	4
+12572	IR	11
+12573	IR	8
+12574	IR	4
+12575	IR	6
+12731	IR	7
+13701	R-E	5
+13702	R-E	4
+
+
+--IDtren Tip_vagon Nr_locuri Nr-vagon
+-- Constanta-Bucuresti
+(1586,'Vagon de clasa 2',117,1),
+(1586,'Vagon de clasa 2',117,2),
+(1586,'Vagon de clasa 1',106,3),
+(1586,'Vagon de clasa 2',117,4),
+(1586,'Vagon de clasa 2',117,5),
+(1586,'Vagon de clasa 1',106,6),
+(1684,'Vagon de clasa 1',106,1),
+(1684,'Vagon de clasa 2',117,2),
+(1684,'Vagon de clasa 2',117,3),
+(1684,'Vagon de clasa 2',117,4),
+(1684,'Vagon de clasa 1',106,5),
+(1580,'Vagon de clasa 2',117,7),
+(1580,'Vagon de clasa 2',117,6),
+(1580,'Vagon de clasa 2',117,5),
+(1580,'Vagon de clasa 2',117,4),
+(1580,'Vagon de clasa 1',106,3),
+(1580,'Vagon de clasa 1',106,2),
+(1580,'Vagon de clasa 1',106,1),
+(1682,'Vagon de clasa 2',117,6),
+(1682,'Vagon de clasa 2',117,5),
+(1682,'Vagon de clasa 1',106,4),
+(1682,'Vagon de clasa 1',106,3),
+(1682,'Vagon de clasa 2',117,2),
+(1682,'Vagon de clasa 2',117,1),
+(1582,'Vagon de clasa 2',117,5),
+(1582,'Vagon de clasa 2',117,4),
+(1582,'Vagon de clasa 2',117,3),
+(1582,'Vagon de clasa 1',106,2),
+(1582,'Vagon de clasa 2',117,1),
+(8004,'Vagon de clasa 2',117,1),
+(8004,'Vagon de clasa 2',117,2),
+(8004,'Vagon de clasa 2',117,3),
+(8004,'Vagon de clasa 1',62,4),
+(1686,'Vagon de clasa 2',117,5),
+(1686,'Vagon de clasa 2',117,4),
+(1686,'Vagon de clasa 1',62,3),
+(1686,'Vagon de clasa 1',106,2),
+(1686,'Vagon de clasa 2',117,1),
+(1584,'Vagon de clasa 2',117,1),
+(1584,'Vagon de clasa 1',106,2),
+(1584,'Vagon de clasa 2',117,3),
+(1584,'Vagon de clasa 2',117,4),
+(1584,'Vagon de clasa 1',117,5),
+(1584,'Vagon de clasa 2',117,6),
+-- Ploiesti_Sud-Brasov
+(3023,'Vagon de clasa 1',62,1),
+(3023,'Vagon de clasa 2',117,2),
+(3023,'Vagon de clasa 2',117,3),
+(1273,'Vagon de clasa 2',117,6),
+(1273,'Vagon de clasa 1',106,5),
+(1273,'Vagon de clasa 1',106,4),
+(1273,'Vagon de clasa 2',117,3),
+(1273,'Vagon de clasa 2',117,2),
+(1273,'Vagon de clasa 2',117,1),
+--Brasov-Ploiesti_Sud
+(12731,'Vagon de clasa 2',106,7),
+(12731,'Vagon de clasa 2',106,6),
+(12731,'Vagon de clasa 2',106,5),
+(12731,'Vagon de clasa 2',106,4),
+(12731,'Vagon de clasa 2',106,3),
+(12731,'Vagon de clasa 1',94,2),
+(12731,'Vagon de clasa 1',94,1),
+(3024,'Vagon de clasa 2',117,4),
+(3024,'Vagon de clasa 2',117,3),
+(3024,'Vagon de clasa 1',106,2),
+(3024,'Vagon de clasa 2',117,1),
+--Bucuresti-Craiova
+(72,'Vagon de clasa 2',117,1),
+(72,'Vagon de clasa 2',117,2),
+(72,'Vagon de clasa 2',117,3),
+(72,'Vagon de clasa 1',106,4),
+(72,'Vagon de clasa 1',106,5),
+(72,'Vagon de clasa 1',106,6),
+(9033,'Vagon de clasa 1',94,3),
+(9033,'Vagon de clasa 2',106,2),
+(9033,'Vagon de clasa 2',106,1),
+(9001,'Vagon de clasa 2',117,1),
+(9001,'Vagon de clasa 2',117,2),
+(9001,'Vagon de clasa 1',106,3),
+(9001,'Vagon de clasa 2',117,4),
+(1823,'Vagon de clasa 2',117,6),
+(1823,'Vagon de clasa 1',106,5),
+(1823,'Vagon de clasa 1',106,4),
+(1823,'Vagon de clasa 2',117,3),
+(1823,'Vagon de clasa 2',117,2),
+(1823,'Vagon de clasa 2',117,1),
+(1691,'Vagon de clasa 2',117,7),
+(1691,'Vagon de clasa 2',117,6),
+(1691,'Vagon de clasa 2',117,5),
+(1691,'Vagon de clasa 2',117,4),
+(1691,'Vagon de clasa 1',106,3),
+(1691,'Vagon de clasa 1',106,2),
+(1691,'Vagon de clasa 1',106,1),
+(9003,'Vagon de clasa 2',117,4),
+(9003,'Vagon de clasa 1',62,3),
+(9003,'Vagon de clasa 1',106,2),
+(9003,'Vagon de clasa 2',117,1),
+(9035,'Vagon de clasa 2',117,3),
+(9035,'Vagon de clasa 2',117,2),
+(9035,'Vagon de clasa 2',117,1),
+(9015,'Vagon de clasa 2',117,1),
+(9015,'Vagon de clasa 1',106,2),
+(9015,'Vagon de clasa 2',117,3),
+(9037,'Vagon de clasa 2',117,4),
+(9037,'Vagon de clasa 1',106,3),
+(9037,'Vagon de clasa 1',106,2),
+(9037,'Vagon de clasa 1',106,1),
+(1693,'Vagon de clasa 2',117,1),
+(1693,'Vagon de clasa 2',117,2),
+(1693,'Vagon de clasa 1',106,3),
+(1693,'Vagon de clasa 2',117,4),
+(1693,'Vagon de clasa 2',117,5),
+(1693,'Vagon de clasa 1',106,6),
+(1835,'Vagon de clasa 2',106,7),
+(1835,'Vagon de clasa 2',106,6),
+(1835,'Vagon de clasa 2',106,5),
+(1835,'Vagon de clasa 2',106,4),
+(1835,'Vagon de clasa 2',106,3),
+(1835,'Vagon de clasa 1',94,2),
+(1835,'Vagon de clasa 1',94,1),
+(9007,'Vagon de clasa 1',106,3),
+(9007,'Vagon de clasa 2',117,2),
+(9007,'Vagon de clasa 2',117,1),
+(1897,'Vagon de clasa 1',106,1),
+(1897,'Vagon de clasa 2',117,2),
+(1897,'Vagon de clasa 2',117,3),
+(1897,'Vagon de clasa 2',117,4),
+(1897,'Vagon de clasa 1',106,5),
+(1597,'Vagon de clasa 2',106,7),
+(1597,'Vagon de clasa 2',106,6),
+(1597,'Vagon de clasa 2',106,5),
+(1597,'Vagon de clasa 2',106,4),
+(1597,'Vagon de clasa 2',106,3),
+(1597,'Vagon de clasa 1',94,2),
+(1597,'Vagon de clasa 1',94,1),
+(78,'Vagon de clasa 2',117,1),
+(78,'Vagon de clasa 1',106,2),
+(78,'Vagon de clasa 2',117,3),
+(78,'Vagon de clasa 2',117,4),
+(78,'Vagon de clasa 1',117,5),
+(78,'Vagon de clasa 2',117,6),
+(1821,'Vagon cuseta',92,8),
+(1821,'Vagon de dormit',61,7),
+(1821,'Vagon de clasa 2',106,6),
+(1821,'Vagon de clasa 2',106,5),
+(1821,'Vagon de clasa 2',106,4),
+(1821,'Vagon de clasa 1',94,3),
+(1821,'Vagon de clasa 1',94,2),
+(1821,'Vagon de clasa 2',106,1),
+
+-- Craiova-Bucuresti
+(1822,'Vagon de clasa 2',106,7),
+(1822,'Vagon de clasa 2',106,6),
+(1822,'Vagon de clasa 2',106,5),
+(1822,'Vagon de clasa 2',106,4),
+(1822,'Vagon de clasa 2',106,3),
+(1822,'Vagon de clasa 1',94,2),
+(1822,'Vagon de clasa 1',94,1),
+(9000,'Vagon de clasa 2',117,1),
+(9000,'Vagon de clasa 2',117,2),
+(9000,'Vagon de clasa 1',106,3),
+(9000,'Vagon de clasa 2',117,4),
+(1692,'Vagon de clasa 2',117,1),
+(1692,'Vagon de clasa 1',106,2),
+(1692,'Vagon de clasa 2',117,3),
+(1692,'Vagon de clasa 2',117,4),
+(1692,'Vagon de clasa 1',117,5),
+(1692,'Vagon de clasa 2',117,6),
+(9010,'Vagon de clasa 1',106,4),
+(9010,'Vagon de clasa 2',117,3),
+(9010,'Vagon de clasa 2',117,2),
+(9010,'Vagon de clasa 2',117,1),
+(73,'Vagon de clasa 2',117,6),
+(73,'Vagon de clasa 1',106,5),
+(73,'Vagon de clasa 1',106,4),
+(73,'Vagon de clasa 2',117,3),
+(73,'Vagon de clasa 2',117,2),
+(73,'Vagon de clasa 2',117,1)

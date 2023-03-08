@@ -1,0 +1,30 @@
+﻿<Window x:Class="Railway_System.ModifyRouteDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Railway_System"
+        mc:Ignorable="d"
+        Height="150" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Ce operatiune doriti sa efectuati?"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center"
+                   Margin="0 20 0 0"
+                   FontSize="16"/>
+        <StackPanel VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                    Height="25"
+                    Margin="15 0 15 20">
+                <Button Content="Export Date"
+                        Name="InsertStationBtn"
+                        Click="InsertStationBtn_Click"
+                    Margin="0 0 50 0"/>
+                <Button Content="Import Date"
+                        Name="DeleteStationBtn"
+                        Click="DeleteStationBtn_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,431 @@
+﻿<Window x:Class="Railway_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Railway_System"
+        mc:Ignorable="d"
+        MinWidth="600" MinHeight="395"
+        Width="800" Height="500"
+        Background ="#29324a"
+        Icon="images/icon.ico"
+        ResizeMode="CanResize">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"
+                      CornerRadius="0"
+                      CaptionHeight="0"
+                      UseAeroCaptionButtons="True"
+                      ResizeBorderThickness="7"/>
+    </WindowChrome.WindowChrome>
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="95"/>
+            <ColumnDefinition Width="2.5*"
+                              MinWidth="230"/>
+            <ColumnDefinition Width="4.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Background="#adaddf"
+                BorderThickness="10 10 0 10"
+                >
+            <Grid >
+                <StackPanel Background="#18223c"
+                        Margin="2">
+
+                    <TextBlock HorizontalAlignment="Center"                       
+                           Margin="0 5 0 0"
+                           FontSize="35"
+                          TextAlignment="Center">
+                        <Hyperlink
+                           Click="myAccountButtonClick"
+                           TextDecorations="None">
+                            <Hyperlink.Style>
+                                <Style TargetType="Hyperlink">
+                                    <Setter Property="Foreground" Value="#ffffff"/>
+                                    <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="#ffcd4f"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                        </Hyperlink.Style>
+                            👤
+                            <LineBreak/>
+                            <TextBlock Text="Contul Meu"
+                               FontSize="14"
+                               Margin="0 0 0 0"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"/>
+                        </Hyperlink>
+                    </TextBlock>
+
+                    <TextBlock HorizontalAlignment="Center"                       
+                           Margin="0 5 0 0"
+                           FontSize="35"
+                          TextAlignment="Center">
+                        <Hyperlink
+                           Click="ticketsHistoryButtonClick"
+                           TextDecorations="None">
+                            <Hyperlink.Style>
+                                <Style TargetType="Hyperlink">
+                                    <Setter Property="Foreground" Value="#ffffff"/>
+                                    <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="#ffcd4f"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                        </Hyperlink.Style>
+                            🎫
+                            <LineBreak/>
+                            <TextBlock Text="Istoric Bilete"
+                               FontSize="14"
+                               Margin="0 -5 0 0"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"/>
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Bottom"
+                                >
+                    <TextBlock HorizontalAlignment="Center" 
+                           
+                           FontSize="35"
+                          TextAlignment="Center">
+                            <Hyperlink
+                                Click="disconnectButtonClick"
+                                TextDecorations="None">
+                                <Hyperlink.Style>
+                                    <Style TargetType="Hyperlink">
+                                        <Setter Property="Foreground" Value="#ffffff"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Foreground" Value="#ffcd4f"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                    </Style>
+                                </Hyperlink.Style>
+                                🚪
+                                <LineBreak/>
+                                <TextBlock Text="Deconectare"
+                                           FontSize="14"
+                                           Margin="0 0 0 10"
+                                           HorizontalAlignment="Center"
+                                           TextAlignment="Center"/>
+                                </Hyperlink>
+                            </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.ColumnSpan="3"
+                Background="#1f273b"
+                Name="top_bar"
+                MouseDown="topBarMouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="Railways"
+                       Foreground="#f2f2ff"
+                       Margin="2 0 0 0" FontFamily="/Railway System;component/fonts/#Top Modern"
+                       FontSize="16"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="_"
+                            BorderThickness="0"
+                            Foreground="#bbccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Padding="-12"
+                            VerticalContentAlignment="Top"
+                            Background="Transparent"
+                            Name="minimize_button"
+                            Click="minimizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="□"
+                            Padding="-8"
+                            VerticalContentAlignment="Top"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Background="Transparent"
+                            Name="maximize_button"
+                            Click="maximizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="╳"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            Margin="0 0 2.5 0"
+                            Background="Transparent"
+                            Name="exit_button"
+                            Click="exitButtonClick"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    Width="220">
+
+            <TextBlock Text="Statie plecare"
+                       Foreground="#ffffff"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       Margin="0 30 0 0"/>
+
+            <Grid Margin="0 10 0 0">
+                <ComboBox VerticalAlignment="Center"
+                          HorizontalAlignment="Stretch"
+                         FontSize="14"
+                         Padding="5 0 0 0"                    
+                         Foreground="#181d3b"
+                         Height="35"
+                         Name="departure_combobox"
+                          IsDropDownOpen="False"
+                         Visibility="Hidden"
+                          IsEditable="True"
+                          SelectionChanged="departureComboboxSelectionChanged">
+
+
+
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="Background" Value="#bcd2e8"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+                </ComboBox>
+
+                <Border Background="#38425c"
+                    Margin="0 0 0 0"
+                    BorderBrush="#ddddff"
+                    BorderThickness="1"
+                    IsHitTestVisible="True">
+
+                    <TextBox VerticalAlignment="Center"
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                         Padding="5 0 0 0"                    
+                         MaxLength="35"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Foreground="#ffffff"
+                         Height="25"
+                         CaretBrush="#ffffff"
+                         Name="departure_box"
+                         IsHitTestVisible="True"
+                         TextChanged="departureTextChanged" 
+                             LostFocus="departureBoxLostFocus"
+                     />
+                </Border>
+            </Grid>
+
+            <TextBlock Text="Statie sosire"
+                       Foreground="#ffffff"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       Margin="0 10 0 0"/>
+
+            <Grid Margin="0 10 0 0">
+                <ComboBox VerticalAlignment="Center"
+                          HorizontalAlignment="Stretch"
+                          Foreground="#181d3b"
+                         FontSize="14"
+                         Padding="5 0 0 0"                    
+                         BorderThickness="0"
+                         Height="35"
+                         Name="arrival_combobox"
+                          IsDropDownOpen="False"
+                         Visibility="Hidden"
+                          IsEditable="True"
+                          SelectionChanged="arrivalComboboxSelectionChanged"
+                          >
+
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="Background" Value="#bcd2e8"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+
+                </ComboBox>
+
+                <Border Background="#38425c"
+                    Margin="0 0 0 0"
+                    BorderBrush="#ddddff"
+                    BorderThickness="1"
+                        IsHitTestVisible="True">
+
+                    <TextBox VerticalAlignment="Center"
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                         Padding="5 0 0 0"                    
+                         MaxLength="20"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Foreground="#ffffff"
+                         Height="35"
+                         CaretBrush="#ffffff"
+                         Name="arrival_box"
+                             IsHitTestVisible="True"
+                            TextChanged="arrivalTextChanged"
+                             LostFocus="arrivalBoxLostFocus"
+                     />
+                </Border>
+            </Grid>
+
+            <TextBlock Text="Data calatoriei"
+                       Foreground="#ffffff"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       Margin="0 10 0 0"/>
+
+            <Grid Margin="0 10 0 0">
+                <DatePicker
+                        FontSize="15"
+                        Background="#bcd2e8"
+                            Name="date_picker"
+                    Visibility="Visible"
+                    IsEnabled="True"
+                    >
+                </DatePicker>
+
+                <Border Background="#38425c"
+                    Margin="0 0 0 0"
+                    BorderBrush="#ddddff"
+                    BorderThickness="1"
+                       Visibility="Visible"
+                        IsHitTestVisible="True"
+                        Cursor="Hand"
+                        
+                       
+                        >
+
+                    <TextBox VerticalAlignment="Center"
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Center"
+                         Padding="5 0 0 0"                    
+                         MaxLength="20"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Foreground="#ffffff"
+                         Text="{Binding ElementName=date_picker, Path=Text}"
+                         Height="35"
+                         CaretBrush="Transparent"
+                         Cursor="Hand"
+                         Name="date_box"
+                         PreviewMouseUp="dateBoxPreviewMouseUp"  
+                             
+                     />
+                </Border>
+            </Grid>
+
+            <Button Content="Cautare"
+                    FontSize="25"
+                    Name="search_button"
+                    Click="searchButtonClick"
+                    Margin="0 50 0 0">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#313b57"/>
+                        <Setter Property="Foreground" Value="#ffa63b"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="FontFamily" Value="/Railway System;component/fonts/#Cabin"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#69584a"/>
+                                <Setter Property="Foreground" Value="#ffcd4f"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="150"
+                                Height="40"
+                                CornerRadius="10"
+                                BorderBrush="#ffa63b"
+                                BorderThickness="2"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+
+
+        <Grid Grid.Column="2"
+                    Grid.Row="1"
+                    Background="#181d3b">
+
+            <DataGrid x:Name="gridDate"
+                      Visibility="Hidden" Margin="0,1,0.4,193.6"/>
+
+            <Button Content="Cumpara"
+                FontSize="25"
+                x:Name="buy_button"
+                Click="buyButtonClick"
+                Margin="242,321,-15.6,84.6">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#313b57"/>
+                        <Setter Property="Foreground" Value="#ffa63b"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="FontFamily" Value="/Railway System;component/fonts/#Cabin"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#69584a"/>
+                                <Setter Property="Foreground" Value="#ffcd4f"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="150"
+                            Height="40"
+                            CornerRadius="10"
+                            BorderBrush="#ffa63b"
+                            BorderThickness="2"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+
+    </Grid>
+</Window>

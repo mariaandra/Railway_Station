@@ -1,0 +1,218 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Data;
+
+namespace Railway_Station
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        DataSet whereismytrain;
+        DataTable passengers;
+        DataTable trains;
+        DataTable tickets;
+        DataTable classes;
+        DataTable stations;
+        DataTable routes;
+        DataTable schedule;
+
+
+        void InitTables()
+        {
+            whereismytrain = new DataSet("WhereIsMyTrain");
+
+            //TABELA PASAGERI
+            passengers = new DataTable("Passengers");
+            whereismytrain.Tables.Add(passengers);
+            DataColumn passengerID_passengers = new DataColumn("IDPassenger", typeof(int));
+            passengerID_passengers.AllowDBNull = false;
+            passengerID_passengers.AutoIncrement = true;
+            passengerID_passengers.AutoIncrementSeed = 1;
+            passengerID_passengers.AutoIncrementStep = 1;
+            passengerID_passengers.Unique = true;
+            passengers.Columns.Add(passengerID_passengers);
+            DataColumn lastname_passengers = new DataColumn("Last_Name", typeof(string));
+            lastname_passengers.AllowDBNull = false;
+            lastname_passengers.MaxLength = 50;
+            passengers.Columns.Add(lastname_passengers);
+            DataColumn firstname_passengers = new DataColumn("First_Name", typeof(string));
+            firstname_passengers.AllowDBNull = false;
+            firstname_passengers.MaxLength = 50;
+            firstname_passengers.Unique = true;
+            passengers.Columns.Add(firstname_passengers);
+            DataColumn email_passengers = new DataColumn("Email", typeof(string));
+            email_passengers.AllowDBNull = false;
+            email_passengers.MaxLength = 50;
+            passengers.Columns.Add(email_passengers);
+            DataColumn password_passengers = new DataColumn("Password", typeof(string));
+            password_passengers.AllowDBNull = false;
+            password_passengers.MaxLength = 50;
+            password_passengers.Unique = false;
+            passengers.Columns.Add(password_passengers);
+            passengers.PrimaryKey = new DataColumn[] { passengerID_passengers };
+
+            //TABELA TRENURI
+            trains = new DataTable("Trains");
+            whereismytrain.Tables.Add(trains);
+            DataColumn trainID_trains = new DataColumn("IDTrain", typeof(int));
+            trainID_trains.AllowDBNull = false;
+            trainID_trains.AutoIncrement = true;
+            trainID_trains.AutoIncrementSeed = 1;
+            trainID_trains.AutoIncrementStep = 1;
+            trainID_trains.Unique = true;
+            trains.Columns.Add(trainID_trains);
+            DataColumn traintype_trains = new DataColumn("Train_Type", typeof(string));
+            traintype_trains.AllowDBNull = false;
+            traintype_trains.MaxLength = 50;
+            traintype_trains.Unique = false;
+            trains.Columns.Add(traintype_trains);
+            DataColumn numberplaces_trains = new DataColumn("Number_of_places", typeof(int));
+            numberplaces_trains.AllowDBNull = false;
+            trains.Columns.Add(numberplaces_trains);
+            trains.PrimaryKey = new DataColumn[] { trainID_trains };
+
+            //TABELA BILETE
+            tickets = new DataTable("Tickets");
+            whereismytrain.Tables.Add(tickets);
+            DataColumn ticketID_tickets = new DataColumn("IDTicket", typeof(int));
+            ticketID_tickets.AllowDBNull = false;
+            ticketID_tickets.AutoIncrement = true;
+            ticketID_tickets.AutoIncrementSeed = 1;
+            ticketID_tickets.AutoIncrementStep = 1;
+            ticketID_tickets.Unique = true;
+            tickets.Columns.Add(ticketID_tickets);
+            DataColumn passengerID_tickets = new DataColumn("IDPassenger", typeof(int));
+            passengerID_tickets.AllowDBNull = false;
+            tickets.Columns.Add(passengerID_tickets);
+            DataColumn trainID_tickets = new DataColumn("IDTrain", typeof(int));
+            trainID_tickets.AllowDBNull = false;
+            tickets.Columns.Add(trainID_tickets);
+            DataColumn price_tickets = new DataColumn("Price", typeof(System.Decimal));
+            price_tickets.DefaultValue = 0.0M;
+            price_tickets.AllowDBNull = false;
+            tickets.Columns.Add(price_tickets);
+            DataColumn IDdeparture_tickets = new DataColumn("IDDeparture_Station", typeof(int));
+            IDdeparture_tickets.AllowDBNull = false;
+            tickets.Columns.Add(IDdeparture_tickets);
+            DataColumn IDdestination__tickets = new DataColumn("IDDestination_Station", typeof(int));
+            IDdestination__tickets.AllowDBNull = false;
+            tickets.Columns.Add(IDdestination__tickets);
+            DataColumn pssngseat__tickets = new DataColumn("Passenger_seat", typeof(int));
+            pssngseat__tickets.AllowDBNull = true;
+            tickets.Columns.Add(pssngseat__tickets);
+            DataColumn wagon__tickets = new DataColumn("Wagon", typeof(int));
+            wagon__tickets.AllowDBNull = false;
+            tickets.Columns.Add(wagon__tickets);
+            tickets.PrimaryKey = new DataColumn[] { ticketID_tickets };
+
+            //TABELA CLASE
+            classes = new DataTable("Classes");
+            whereismytrain.Tables.Add(classes);
+            DataColumn wagonType_classes = new DataColumn("Wagon_Type", typeof(string));
+            wagonType_classes.AllowDBNull = false;
+            wagonType_classes.MaxLength = 50;
+            wagonType_classes.Unique = true;
+            classes.Columns.Add(wagonType_classes);
+            DataColumn trainID_classes = new DataColumn("TrainID", typeof(int));
+            trainID_classes.AllowDBNull = false;
+            classes.Columns.Add(trainID_classes);
+            DataColumn noSeats_classes = new DataColumn("No_Seats", typeof(int));
+            noSeats_classes.AllowDBNull = false;
+            classes.Columns.Add(noSeats_classes);
+            classes.PrimaryKey = new DataColumn[] { wagonType_classes };
+
+            //TABELA STATII
+            stations = new DataTable("Stations");
+            whereismytrain.Tables.Add(stations);
+            DataColumn stationID_stations = new DataColumn("StationID", typeof(int));
+            stationID_stations.AllowDBNull = false;
+            stationID_stations.AutoIncrement = true;
+            stationID_stations.AutoIncrementSeed = 1;
+            stationID_stations.AutoIncrementStep = 1;
+            stationID_stations.Unique = true;
+            stations.Columns.Add(stationID_stations);
+            DataColumn stationName_stations = new DataColumn("Station_Name", typeof(string));
+            stationName_stations.AllowDBNull = false;
+            stationName_stations.MaxLength = 50;
+            stationName_stations.Unique = true;
+            stations.Columns.Add(stationName_stations);
+            stations.PrimaryKey = new DataColumn[] { stationID_stations };
+
+            //TABELA RUTE
+            routes = new DataTable("Routes");
+            whereismytrain.Tables.Add(routes);
+            DataColumn routeID_routes = new DataColumn("RouteID", typeof(int));
+            routeID_routes.AllowDBNull = false;
+            routeID_routes.AutoIncrement = true;
+            routeID_routes.AutoIncrementSeed = 1;
+            routeID_routes.AutoIncrementStep = 1;
+            routeID_routes.Unique = true;
+            routes.Columns.Add(routeID_routes);
+            DataColumn traindID_routes = new DataColumn("TrainID", typeof(int));
+            traindID_routes.AllowDBNull = false;
+            routes.Columns.Add(traindID_routes);
+            DataColumn stationID_routes = new DataColumn("StationID", typeof(int));
+            stationID_routes.AllowDBNull = false;
+            routes.Columns.Add(stationID_routes);
+            routes.PrimaryKey = new DataColumn[] { routeID_routes };
+
+            //TABELA PROGRAM
+            schedule = new DataTable("Schedule");
+            whereismytrain.Tables.Add(schedule);
+            DataColumn date_schedule = new DataColumn("Date", typeof(DateTime));
+            date_schedule.AllowDBNull = false;
+            schedule.Columns.Add(date_schedule);
+            DataColumn routeID_schedule = new DataColumn("RouteID", typeof(int));
+            routeID_schedule.AllowDBNull = false;
+            schedule.Columns.Add(routeID_schedule);
+            DataColumn arrivalHour_schedule = new DataColumn("Arrival_Hour", typeof(DateTime));
+            arrivalHour_schedule.AllowDBNull = true;
+            schedule.Columns.Add(arrivalHour_schedule);
+            DataColumn departureHour_schedule = new DataColumn("Departure_Hour", typeof(DateTime));
+            departureHour_schedule.AllowDBNull = true;
+            schedule.Columns.Add(departureHour_schedule);
+            DataColumn delay_schedule = new DataColumn("Delay", typeof(int));
+            delay_schedule.AllowDBNull = true;
+            schedule.Columns.Add(delay_schedule);
+
+            //FK
+            ForeignKeyConstraint tickets_passengers = new ForeignKeyConstraint("Tickets_passengers", passengerID_passengers, passengerID_tickets);
+            tickets.Constraints.Add(tickets_passengers);
+            ForeignKeyConstraint tickets_stations_D = new ForeignKeyConstraint("Tickets_Stations_D", stationID_stations, IDdeparture_tickets);
+            tickets.Constraints.Add(tickets_stations_D);
+            ForeignKeyConstraint tickets_stations_A = new ForeignKeyConstraint("Tickets_Stations_A", stationID_stations, IDdestination__tickets);
+            tickets.Constraints.Add(tickets_stations_A);
+
+            ForeignKeyConstraint classes_trains = new ForeignKeyConstraint("Classes_Trains", trainID_trains, trainID_classes);
+            classes.Constraints.Add(classes_trains);
+
+            ForeignKeyConstraint routes_stations = new ForeignKeyConstraint("Routes_Stations", stationID_stations, stationID_routes);
+            routes.Constraints.Add(routes_stations);
+            ForeignKeyConstraint routes_trains = new ForeignKeyConstraint("Routes_Trains", trainID_trains, traindID_routes);
+            routes.Constraints.Add(routes_trains);
+
+            ForeignKeyConstraint schedule_routes = new ForeignKeyConstraint("Schedule_Routes", routeID_routes, routeID_schedule);
+            schedule.Constraints.Add(schedule_routes);
+        }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            InitTables();
+        }
+    }
+}

@@ -1,0 +1,236 @@
+﻿<Window x:Class="Railway_System.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+        xmlns:local="clr-namespace:Railway_System"
+        mc:Ignorable="d"
+        MinWidth="400" MinHeight="380"
+        Width="800" Height="500"
+        Background ="#29324a"
+        Icon="images/icon.ico"
+        ResizeMode="CanResize">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"
+                      CornerRadius="0"
+                      CaptionHeight="0"
+                      UseAeroCaptionButtons="True"
+                      ResizeBorderThickness="7"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2"
+                Background="#1f273b"
+                Name="top_bar"
+                MouseDown="topBarMouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="Railways"
+                       Foreground="#f2f2ff"
+                       Margin="2 0 0 0" FontFamily="/Railway System;component/fonts/#Top Modern"
+                       FontSize="16"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="_"
+                            BorderThickness="0"
+                            Foreground="#bbccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Padding="-12"
+                            VerticalContentAlignment="Top"
+                            Background="Transparent"
+                            Name="minimize_button"
+                            Click="minimizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="□"
+                            Padding="-8"
+                            VerticalContentAlignment="Top"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Background="Transparent"
+                            Name="maximize_button"
+                            Click="maximizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="╳"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            Margin="0 0 2.5 0"
+                            Background="Transparent"
+                            Name="exit_button"
+                            Click="exitButtonClick"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Autentificare"
+                       Foreground="#ddddff"
+                       FontSize="50"
+                       Margin="60 0 60 0"
+                       HorizontalAlignment="Center"
+                       FontFamily="/Railway System;component/fonts/#Cabin"
+                       />
+
+            <TextBlock Text="Va rugam sa introduceti datele contului de utilizator"
+                       Foreground="#ddddff"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       FontWeight="Light"
+                       />
+
+            <Grid Margin="0 30 0 0">
+                <Border Background="#38425c"
+                    BorderBrush="#ddddff"
+                    CornerRadius="10"
+                    BorderThickness="1">
+
+                    <TextBox VerticalAlignment="Center"
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                         Padding="5 0 0 0"                    
+                         MaxLength="30"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Foreground="#ffffff"
+                         Height="35"
+                         CaretBrush="#ffffff"
+                         Name="email_box"
+                         TextChanged="emailBoxTextChanged"
+                     />
+                </Border>
+
+                <TextBlock Text="Email"
+                           FontStyle="Italic"
+                           FontWeight="Light"
+                           Foreground="#aaaabb"
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           Padding="8 0 0 0"
+                           Name="email_placeholder"
+                           IsHitTestVisible="False">
+                </TextBlock>
+            </Grid>
+
+            <Grid Margin="0 30 0 0">
+                <Border Background="#38425c"
+                    BorderBrush="#ddddff"
+                    CornerRadius="10"
+                    BorderThickness="1">
+
+                    <PasswordBox VerticalAlignment="Center"
+                         FontSize="20"
+                         VerticalContentAlignment="Center"
+                         Padding="5 0 0 0"                    
+                         MaxLength="25"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         Foreground="#ffffff"
+                         Height="35"
+                         CaretBrush="#ffffff"
+                         Name="password_box"
+                         PasswordChanged="passwordBoxPasswordChanged">
+                    </PasswordBox>
+                </Border>
+
+                <TextBlock Text="Parola"
+                           FontStyle="Italic"
+                           FontWeight="Light"
+                           Foreground="#aaaabb"
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           Padding="8 0 0 0"
+                           Name="password_placeholder"
+                           IsHitTestVisible="False">
+                </TextBlock>
+            </Grid>
+
+            <Button Content="Conectare"
+                    FontSize="25"
+                    Name="login_button"
+                    Click="loginButtonClick"
+                    Margin="0 30 0 0">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#313b57"/>
+                        <Setter Property="Foreground" Value="#ffa63b"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="FontFamily" Value="/Railway System;component/fonts/#Cabin"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#69584a"/>
+                                <Setter Property="Foreground" Value="#ffcd4f"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="150"
+                                Height="40"
+                                CornerRadius="10"
+                                BorderBrush="#ffa63b"
+                                BorderThickness="2"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 20 0 0">
+                <TextBlock HorizontalAlignment="Center"
+                           FontSize="15"
+                           Foreground="#ddddff"
+                           Margin="-3.5 0 0 0"
+                           Text="Nu aveti cont?"/>
+
+                <TextBlock HorizontalAlignment="Center"
+                           Margin="7 0 0 0"
+                           FontSize="15"
+                           FontStyle="Italic"
+                           FontWeight="Light">
+                <Hyperlink Name="register_button"
+                           Click="registerButtonClick"
+                           TextDecorations="None">
+                    <Hyperlink.Style>
+                        <Style TargetType="Hyperlink">
+                            <Setter Property="Foreground" Value="#ffffff"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="#ffcd4f"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Hyperlink.Style>
+                    Inregistrati-va
+                </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

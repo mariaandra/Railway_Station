@@ -1,0 +1,128 @@
+﻿<Window x:Class="Railway_System.MyTickets"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Railway_System"
+        mc:Ignorable="d"
+        MinWidth="600" MinHeight="395"
+        Width="800" Height="500"
+        Background ="#29324a"
+        Icon="images/icon.ico"
+        ResizeMode="CanResize">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"
+                      CornerRadius="0"
+                      CaptionHeight="0"
+                      UseAeroCaptionButtons="True"
+                      ResizeBorderThickness="7"/>
+    </WindowChrome.WindowChrome>
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="95"/>
+            <ColumnDefinition Width="2.5*"
+                              MinWidth="230"/>
+            <ColumnDefinition Width="4.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="3"
+                Background="#1f273b"
+                Name="top_bar"
+                MouseDown="topBarMouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="Railways"
+                       Foreground="#f2f2ff"
+                       Margin="2 0 0 0" FontFamily="/Railway System;component/fonts/#Top Modern"
+                       FontSize="16"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="_"
+                            BorderThickness="0"
+                            Foreground="#bbccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Padding="-12"
+                            VerticalContentAlignment="Top"
+                            Background="Transparent"
+                            Name="minimize_button"
+                            Click="minimizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="□"
+                            Padding="-8"
+                            VerticalContentAlignment="Top"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            FontSize="23"
+                            Background="Transparent"
+                            Name="maximize_button"
+                            Click="maximizeButtonClick"/>
+
+                    <Button Width="25"
+                            Height="20"
+                            Content="╳"
+                            BorderThickness="0"
+                            Foreground="#ccccf2"
+                            FontWeight="Bold"
+                            Margin="0 0 2.5 0"
+                            Background="Transparent"
+                            Name="exit_button"
+                            Click="exitButtonClick"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <DataGrid x:Name="ticketsgrid" HorizontalAlignment="Left" Height="242" Margin="99,57.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="578" RenderTransformOrigin="-1.557,-0.018" Grid.ColumnSpan="3"/>
+        <Button Content="Stergere"
+            FontSize="25"
+            x:Name="delete_button"
+            Click="deleteButtonClick"
+                    Grid.ColumnSpan="2" Margin="86,344,239,75" Grid.Row="1" Grid.Column="1">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#313b57"/>
+                    <Setter Property="Foreground" Value="#ffa63b"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="FontFamily" Value="/Railway System;component/fonts/#Cabin"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#69584a"/>
+                            <Setter Property="Foreground" Value="#ffcd4f"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="150"
+                        Height="40"
+                        CornerRadius="10"
+                        BorderBrush="#ffa63b"
+                        BorderThickness="2"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MersulTrenurilor" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=daniel-work;Initial Catalog=MersulTrenurilor;Integrated Security=True" SettingsObjectName="Railway_System.Properties.Settings" SettingsPropertyName="MersulTrenurilorConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bilete" Member="Biletes">
+    <Type Name="Bilete">
+      <Column Name="IDBilet" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPasager" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pret" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Statie_plecare" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Statie_destinatie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Loc_pasager" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vagon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Pasageri_Bilete" Member="Pasageri" ThisKey="IDPasager" OtherKey="IDPasager" Type="Pasageri" IsForeignKey="true" />
+      <Association Name="Trenuri_Bilete" Member="Trenuri" ThisKey="IDTren" OtherKey="IDTren" Type="Trenuri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vagoane" Member="Vagoanes">
+    <Type Name="Vagoane">
+      <Column Name="IDVagon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tip_vagon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Numar_locuri" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Numar_vagon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Trenuri_Vagoane" Member="Trenuri" ThisKey="IDTren" OtherKey="IDTren" Type="Trenuri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pasageri" Member="Pasageris">
+    <Type Name="Pasageri">
+      <Column Name="IDPasager" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Parola" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Pasageri_Bilete" Member="Biletes" ThisKey="IDPasager" OtherKey="IDPasager" Type="Bilete" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Program" Member="Programs">
+    <Type Name="Program">
+      <Column Name="Ziua" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IDRuta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ora_sosire" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ora_plecare" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Intarzieri" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Rute_Program" Member="Rute" ThisKey="IDRuta" OtherKey="IDRuta" Type="Rute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rute" Member="Rutes">
+    <Type Name="Rute">
+      <Column Name="IDRuta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDStatie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Rute_Program" Member="Programs" ThisKey="IDRuta" OtherKey="IDRuta" Type="Program" />
+      <Association Name="Statii_Rute" Member="Statii" ThisKey="IDStatie" OtherKey="IDStatie" Type="Statii" IsForeignKey="true" />
+      <Association Name="Trenuri_Rute" Member="Trenuri" ThisKey="IDTren" OtherKey="IDTren" Type="Trenuri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Statii" Member="Statiis">
+    <Type Name="Statii">
+      <Column Name="IDStatie" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nume_statie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Statii_Rute" Member="Rutes" ThisKey="IDStatie" OtherKey="IDStatie" Type="Rute" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trenuri" Member="Trenuris">
+    <Type Name="Trenuri">
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tip_Tren" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Numar_vagoane" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Trenuri_Bilete" Member="Biletes" ThisKey="IDTren" OtherKey="IDTren" Type="Bilete" />
+      <Association Name="Trenuri_Vagoane" Member="Vagoanes" ThisKey="IDTren" OtherKey="IDTren" Type="Vagoane" />
+      <Association Name="Trenuri_Rute" Member="Rutes" ThisKey="IDTren" OtherKey="IDTren" Type="Rute" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatiiPlecare" Member="StatiiPlecares">
+    <Type Name="StatiiPlecare">
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tip_Tren" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ora_sosire" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ora_plecare" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nume_statie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ziua" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatiiSosire" Member="StatiiSosires">
+    <Type Name="StatiiSosire">
+      <Column Name="IDTren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tip_Tren" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ora_sosire" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ora_plecare" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nume_statie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ziua" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="097d752d-77d7-4ebe-ad71-633511cd2166" absoluteBounds="3.5, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataClasses1DataContext/Bilete" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1257f854-9751-4c0e-b644-74a666b6549b" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="232d513c-9cfb-49f0-88ba-39316ed551ac" absoluteBounds="3.5, 6.5, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/Vagoane" />
+      <nestedChildShapes>
+        <elementListCompartment Id="157a12a7-de3c-4bbe-9d63-add8428a43ec" absoluteBounds="3.515, 6.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c394a62-1cad-45d3-9439-2002cd4dc85c" absoluteBounds="0.75, 1, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DataClasses1DataContext/Pasageri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ccad9ce-794e-4b3f-82c7-815f7907a459" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13613338-cbfd-4b8a-afdc-6a379966215d" absoluteBounds="6.25, 4, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/Program" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7237be86-19a6-46ed-a886-8d4036dae1f1" absoluteBounds="6.265, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb35243c-7f23-4cca-804a-d2e5a81dfca6" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses1DataContext/Rute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="040cf0ea-f361-460f-80a5-199b886087bb" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e5c8507-ee43-4e42-b3e7-82364a12ceb3" absoluteBounds="0.75, 7.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClasses1DataContext/Statii" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa3a63ac-bdaf-4176-b97d-72530bf61cc4" absoluteBounds="0.765, 7.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b22eff39-4d5d-4aec-bdbd-c181ca7709ce" absoluteBounds="0.75, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses1DataContext/Trenuri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48196403-d8f1-4689-9321-21ef61f921b8" absoluteBounds="0.765, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Pasageri/Pasageri_Bilete" />
+      <nodes>
+        <classShapeMoniker Id="2c394a62-1cad-45d3-9439-2002cd4dc85c" />
+        <classShapeMoniker Id="097d752d-77d7-4ebe-ad71-633511cd2166" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.94314697265625); (6.25 : 4.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Rute/Rute_Program" />
+      <nodes>
+        <classShapeMoniker Id="cb35243c-7f23-4cca-804a-d2e5a81dfca6" />
+        <classShapeMoniker Id="13613338-cbfd-4b8a-afdc-6a379966215d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.37591745577925); (3.125 : 7.00091745577925); (3.125 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Statii/Statii_Rute" />
+      <nodes>
+        <classShapeMoniker Id="0e5c8507-ee43-4e42-b3e7-82364a12ceb3" />
+        <classShapeMoniker Id="cb35243c-7f23-4cca-804a-d2e5a81dfca6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.25); (3.125 : 3.875); (3.125 : 2.52287675585937); (3.5 : 2.52287675585937)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Trenuri/Trenuri_Bilete" />
+      <nodes>
+        <classShapeMoniker Id="b22eff39-4d5d-4aec-bdbd-c181ca7709ce" />
+        <classShapeMoniker Id="097d752d-77d7-4ebe-ad71-633511cd2166" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.5744429077524); (3.06607443490112 : 5.89051734265352 : JumpStart); (3.18392556509888 : 6.00836847285128 : JumpEnd); (3.3125 : 6.1369429077524); (3.3125 : 7.38544840494792); (3.5 : 7.38544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Trenuri/Trenuri_Vagoane" />
+      <nodes>
+        <classShapeMoniker Id="b22eff39-4d5d-4aec-bdbd-c181ca7709ce" />
+        <classShapeMoniker Id="232d513c-9cfb-49f0-88ba-39316ed551ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.56532598632812); (3.5 : 4.56532598632812)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Trenuri/Trenuri_Rute" />
+      <nodes>
+        <classShapeMoniker Id="b22eff39-4d5d-4aec-bdbd-c181ca7709ce" />
+        <classShapeMoniker Id="cb35243c-7f23-4cca-804a-d2e5a81dfca6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e5a20a6a-5764-4ccc-8dad-25368d7c1429" absoluteBounds="6.375, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DataClasses1DataContext/StatiiPlecare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2512f3a4-fa17-4f03-b014-2e4db433b317" absoluteBounds="6.39, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1233e852-2370-4a85-ad03-81e06785ec82" absoluteBounds="6.375, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClasses1DataContext/StatiiSosire" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f0f95a5-c0d6-4a87-aaac-5677e8626dbe" absoluteBounds="6.39, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

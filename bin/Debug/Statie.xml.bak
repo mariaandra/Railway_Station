@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<Statii>
+    <Statie IDStatie="200">
+      <NumeStatie>Deva</NumeStatie>
+    </Statie>
+    <Statie IDStatie="201">
+      <NumeStatie>Timisoara</NumeStatie>
+    </Statie>
+</Statii>

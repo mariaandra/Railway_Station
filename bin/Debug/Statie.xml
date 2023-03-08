@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<Statii>
+    <Statie IDStatie="300">
+      <NumeStatie>Sibiu</NumeStatie>
+    </Statie>
+    <Statie IDStatie="301">
+      <NumeStatie>Arad</NumeStatie>
+    </Statie>
+</Statii>
